@@ -24,7 +24,7 @@ elif [ "$(readlink -f "$MU_CLIENT_ROOT/Data")" != "$asset_root/Data" ]; then
 fi
 # Crear preferencias sólo en el primer arranque; nunca copiar las del build.
 if [ ! -e "$MU_CLIENT_ROOT/Config.ini" ] && [ ! -e "$MU_CLIENT_ROOT/config.ini" ]; then
-    printf '[Window]\nWindowMode=1\nBorderless=0\nResolution=2\n' > "$MU_CLIENT_ROOT/Config.ini"
+    printf '[Window]\nWindowMode=1\nBorderless=0\nResolution=4\n[Language]\nLangSelection=Por\n' > "$MU_CLIENT_ROOT/Config.ini"
 fi
 cd "$MU_CLIENT_ROOT"
 exec "$package_dir/main" "$@"
